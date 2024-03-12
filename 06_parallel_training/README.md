@@ -1,6 +1,6 @@
 # Parallel Training Methods
 
-[Sam Foreman](https://samforeman.me)
+[Sam Foreman](https://samforeman.me)  
 _2024-03-12_
 
 - Slides: [📊 Parallel Training Slides](https://saforem2.github.io/parallel-training-slides)
@@ -18,7 +18,7 @@ _2024-03-12_
 1. Launch Job:
 
     ```bash
-    $ qsub -A argonne_tpc -q debug -l select=2 -l walltime=01:00:00,filesystems=eagle:home -I # train_llama_alcf_polaris_qsub.sh
+    $ qsub -A ALCFAITP -q debug -l select=2 -l walltime=01:00:00,filesystems=eagle:home -I
     qsub: waiting for job 1779554.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov to start
     qsub: job 1779554.polaris-pbs-01.hsn.cm.polaris.alcf.anl.gov ready
     ```
@@ -83,7 +83,6 @@ _2024-03-12_
 
     ```bash
     (2023-10-04) $ python3 data/shakespeare_char/prepare.py
-    Using HF_DATASETS_CACHE=/lus/eagle/projects/datascience/foremans/tmp/wordplay/data/shakespeare_char/.cache/huggingface
     length of dataset in characters: 1,115,394
     all the unique characters:
      !$&',-.3:;?ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz
@@ -351,3 +350,12 @@ _2024-03-12_
     ```
 
     </details>
+
+10. \[**Homework**\] Submit either:
+    - Link to W&B run, e.g.
+
+        ```bash
+        wandb: 🚀 View run feasible-sunset-4 at: https://wandb.ai/aurora_gpt/WordPlay/runs/6b22rdws
+        ```
+
+    - Path to logfile
